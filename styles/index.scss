@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+@import "./reset";
+
+%flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin font-properties ($font-weight, $font-size, $line-height) {
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+$purple: #AE34CD;
+$violet: #D4ADD9;
+$dark-purple: #390646;
+
+.aside {
+
+    &__wrap {
+        background-color: $purple;
+        border-radius: 39px;
+        max-width: 500px;
+        min-height: 900px;
+        padding: 30px 20px;
+    }
+
+    &__sun-wrap {
+        background-color: #D4ADD9;
+        border-radius: 39px;
+        width: 120px;
+        height: 40px;
+        padding: 5px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    &__sun-img {
+        transform: translateY(-30px) translateX(-29px)
+    }
+
+    &__menu {
+        @extend %flex;
+        flex-direction: column;
+        gap: 60px;
+        padding: 20px 10px;
+    }
+
+    &__menu-items {
+        @extend %flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    &__h4 {
+        color: white;
+        @include font-properties(400, 30px, 35px)
+    }
+}
+
+.mini-img {
+    width: 90px;
+    height: 90px;
+    
+}
+
+.cards-wrap {
+    @extend %flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.header {
+    &__wrap {
+        @extend %flex;
+        justify-content: space-between;
+        background-color: $violet;
+        border-radius: 39px;
+        padding: 10px 20px;
+        max-width: 1048px;
+        min-height: 133px;
+        gap: 79px;
+        
+    }
+
+    &__money {
+        @extend %flex;
+        max-width: 480px;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__img {
+        max-width: 107px;
+    }
+
+    &__money-balance {
+        @extend %flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    &__h2 {
+        color:  $dark-purple;
+        @include font-properties(800, 60px, 70px)
+    }
+
+    &__txt {
+        color: white;
+        @include font-properties(800, 20px, 24px)
+    }
+
+    &__balance {
+        @extend %flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__h1 {
+        padding-bottom: 10px;
+        color: $dark-purple;
+        @include font-properties(800, 50px, 60px)
+    }
+}
+
+.main {
+
+    &__wrap {
+        background-color: $violet;
+        border-radius: 39px;
+        padding: 40px 30px;
+        max-width: 1048px;
+    }
+
+    &__img {
+        max-width: 929px;
+        min-height: 400px;
+        width: 100%;
+    }
+}
+
+.footer {
+    &__wrap {
+        @extend %flex;
+        gap: 40px;
+        align-items: center;
+    }
+
+    &__block-1 {
+        background-color: $violet;
+        border-radius: 39px;
+        max-width: 370px;
+        @extend %flex;
+        justify-content: center;
+        padding: 35px 85px;
+    }
+
+    &__block-2 {
+        background-color: $violet;
+        border-radius: 39px;
+        padding: 20px 90px;
+        max-width: 620px;
+        @extend %flex;
+        justify-content: center;
+    }
+
+    &__img-1 {
+        max-width: 160px;
+        height: 160px;
+    }
+
+    &__img {
+        max-width: 210px;
+        height: 210px;
+        transform: translateX(60px) 
+        translateY(-219px);
+    }
+
+    &__img-3 {
+        transform: translateX(200px) 
+        translateY(-210px);
+    }
+
+    &__flex {
+        @extend %flex;
+        align-items: center;
+        gap: 30px;
+    }
+}
